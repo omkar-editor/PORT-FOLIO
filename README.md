@@ -6,12 +6,12 @@
 
 <p align="center">
   <a href="https://github.com/omkar-editor">
-    <img src="https://img.shields.io/github/followers/YOUR_USERNAME?label=Followers&style=for-the-badge" />
+    <img src="https://img.shields.io/github/followers/omkar-editor?label=Followers&style=for-the-badge" />
   </a>
   <a href="https://github.com/omkar-editor">
-    <img src="https://img.shields.io/github/stars/YOUR_USERNAME?affiliations=OWNER&style=for-the-badge" />
+    <img src="https://img.shields.io/github/stars/omkar-editor?affiliations=OWNER&style=for-the-badge" />
   </a>
-  <img src="https://komarev.com/ghpvc/?username=YOUR_USERNAME&style=for-the-badge&color=blue" />
+  <img src="https://komarev.com/ghpvc/?username=omkar-editor&style=for-the-badge&color=blue" />
 </p>
 
 ---
