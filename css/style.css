@@ -1,56 +1,83 @@
+/* ==========================
+   GOOGLE FONTS
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-
-:root{
-    --primary:#00d4ff;
-    --secondary:#6c63ff;
-    --dark:#0f172a;
-    --light:#f8fafc;
-    --glass:rgba(255,255,255,0.08);
-}
+/* ==========================
+   GLOBAL
+========================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
     scroll-behavior:smooth;
 }
 
 body{
-    background:linear-gradient(
-        135deg,
-        #0f172a,
-        #111827,
-        #1e293b
-    );
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
     color:white;
-    min-height:100vh;
+    overflow-x:hidden;
 }
 
-/* ======================
+/* Background Glow */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#3b82f6;
+    border-radius:50%;
+    filter:blur(180px);
+    top:-120px;
+    left:-120px;
+    opacity:.35;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:#9333ea;
+    border-radius:50%;
+    filter:blur(180px);
+    right:-100px;
+    bottom:-100px;
+    opacity:.30;
+    z-index:-1;
+}
+
+/* ==========================
    NAVBAR
-====================== */
+========================== */
 
 header{
     position:sticky;
     top:0;
-    z-index:1000;
+    z-index:999;
 }
 
 nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:20px 8%;
-    backdrop-filter:blur(12px);
-    background:rgba(15,23,42,.7);
+
+    backdrop-filter:blur(18px);
+    background:rgba(255,255,255,.08);
+
     border-bottom:1px solid rgba(255,255,255,.1);
 }
 
 .logo{
-    font-size:1.8rem;
+    font-size:30px;
     font-weight:700;
-    color:var(--primary);
+    color:#38bdf8;
     letter-spacing:1px;
 }
 
@@ -60,291 +87,355 @@ nav ul{
     gap:30px;
 }
 
-nav ul li a{
-    text-decoration:none;
+nav a{
     color:white;
-    font-weight:500;
+    text-decoration:none;
+    font-size:17px;
     transition:.3s;
     position:relative;
 }
 
-nav ul li a::after{
-    content:'';
-    position:absolute;
-    width:0;
+nav a::after{
+    content:"";
+    width:0%;
     height:2px;
+    background:#38bdf8;
+    position:absolute;
     left:0;
-    bottom:-5px;
-    background:var(--primary);
+    bottom:-6px;
     transition:.4s;
 }
 
-nav ul li a:hover::after{
+nav a:hover::after{
     width:100%;
 }
 
-nav ul li a:hover{
-    color:var(--primary);
+nav a:hover{
+    color:#38bdf8;
 }
 
-/* ======================
-   HERO SECTION
-====================== */
+/* ==========================
+   HERO
+========================== */
 
 #hero{
     min-height:100vh;
+
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
+
     text-align:center;
-    padding:50px 20px;
+    padding:40px;
 }
 
 .profile-pic{
-    width:230px;
-    height:230px;
-    object-fit:cover;
+    width:220px;
+    height:220px;
+
     border-radius:50%;
-    border:5px solid var(--primary);
+    object-fit:cover;
+
+    border:6px solid #38bdf8;
+
     box-shadow:
-    0 0 30px rgba(0,212,255,.5),
-    0 0 60px rgba(0,212,255,.2);
-    margin-bottom:25px;
-    transition:.4s;
+    0 0 25px #38bdf8,
+    0 0 70px rgba(56,189,248,.35);
+
+    transition:.5s;
 }
 
 .profile-pic:hover{
-    transform:scale(1.05);
+    transform:scale(1.05) rotate(2deg);
 }
 
 #hero h1{
-    font-size:4rem;
-    margin-bottom:10px;
-}
-
-#hero h1 b{
-    color:var(--primary);
+    margin-top:25px;
+    font-size:52px;
 }
 
 #hero pre{
-    color:#cbd5e1;
-    font-size:1.2rem;
-    white-space:normal;
+    font-size:20px;
+    color:#38bdf8;
+    margin-top:10px;
+    font-family:Poppins;
 }
 
 blockquote{
+    margin-top:25px;
     max-width:700px;
-    margin:25px auto;
-    color:#94a3b8;
-    font-style:italic;
+    font-size:18px;
     line-height:1.8;
+    color:#d1d5db;
 }
 
-/* Hero Button */
+/* ==========================
+BUTTON
+========================== */
 
 #btn{
-    background:linear-gradient(
-    135deg,
-    var(--primary),
-    var(--secondary)
-    );
+    margin-top:35px;
+    padding:16px 40px;
+
     border:none;
-    color:white;
-    padding:15px 35px;
+    outline:none;
+
     border-radius:50px;
-    font-weight:600;
-    font-size:1rem;
+
     cursor:pointer;
+
+    font-size:17px;
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(90deg,#3b82f6,#8b5cf6);
+
     transition:.4s;
-    box-shadow:0 10px 30px rgba(0,212,255,.3);
+
+    box-shadow:0 0 25px rgba(59,130,246,.5);
 }
 
 #btn:hover{
     transform:translateY(-5px);
-    box-shadow:0 20px 40px rgba(0,212,255,.4);
+    box-shadow:0 0 40px #3b82f6;
 }
 
-/* ======================
-   SECTIONS
-====================== */
+/* ==========================
+SECTIONS
+========================== */
 
 section{
-    padding:100px 10%;
+    width:90%;
+    max-width:1200px;
+
+    margin:70px auto;
+
+    padding:45px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    transition:.4s;
+}
+
+section:hover{
+    transform:translateY(-8px);
 }
 
 section h2{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:2.5rem;
-    color:var(--primary);
+    font-size:36px;
+    color:#38bdf8;
+    margin-bottom:25px;
 }
 
-/* About */
-
-#about{
-    background:var(--glass);
-    backdrop-filter:blur(10px);
-    border-radius:20px;
-    margin:40px;
-    border:1px solid rgba(255,255,255,.1);
+section p{
+    color:#d6d6d6;
+    line-height:1.9;
+    font-size:17px;
 }
 
-#about p{
-    text-align:center;
-    line-height:2;
-    color:#d1d5db;
-}
-
-/* ======================
-   PROJECTS
-====================== */
+/* ==========================
+PROJECTS
+========================== */
 
 #projects ul{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
     list-style:none;
 }
 
 #projects li{
-    background:var(--glass);
-    padding:30px;
-    border-radius:20px;
-    backdrop-filter:blur(10px);
-    transition:.4s;
-    border:1px solid rgba(255,255,255,.1);
-}
-
-#projects li:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 40px rgba(0,212,255,.2);
+    margin:18px 0;
 }
 
 #projects a{
     color:white;
     text-decoration:none;
-    font-size:1.1rem;
-    font-weight:600;
+    font-size:18px;
+    transition:.3s;
 }
 
-/* ======================
-   SKILLS
-====================== */
+#projects a:hover{
+    color:#38bdf8;
+    padding-left:10px;
+}
+
+/* ==========================
+SKILLS
+========================== */
 
 .skills-container{
     display:flex;
     flex-wrap:wrap;
-    justify-content:center;
     gap:20px;
+    justify-content:center;
 }
 
 .skill{
     border:none;
-    padding:15px 25px;
-    border-radius:50px;
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(10px);
-    transition:.4s;
-}
 
-.skill:hover{
-    transform:scale(1.1);
-    background:linear-gradient(
-    135deg,
-    var(--primary),
-    var(--secondary)
-    );
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    transition:.4s;
+
+    cursor:pointer;
 }
 
 .skill a{
-    text-decoration:none;
     color:white;
+    text-decoration:none;
+    font-size:17px;
     font-weight:600;
 }
 
-/* ======================
-   CONTACT
-====================== */
+.skill:hover{
+    transform:translateY(-8px) scale(1.08);
+    box-shadow:0 0 30px #3b82f6;
+}
+
+/* ==========================
+FOOTER
+========================== */
 
 footer{
+
     text-align:center;
-    padding:50px 20px;
+
+    margin-top:70px;
+
+    padding:40px;
+
+    background:rgba(255,255,255,.05);
 }
 
 footer button{
     width:65px;
     height:65px;
+
     border:none;
+
     border-radius:50%;
-    margin:10px;
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(10px);
+
+    margin:12px;
+
+    cursor:pointer;
+
+    background:white;
+
     transition:.4s;
 }
 
 footer button:hover{
-    transform:translateY(-8px);
-    background:linear-gradient(
-    135deg,
-    var(--primary),
-    var(--secondary)
-    );
+    transform:translateY(-8px) rotate(8deg);
+    box-shadow:0 0 25px #38bdf8;
 }
 
 footer img{
-    width:32px;
-    height:32px;
+    width:34px;
+    height:34px;
 }
 
 footer p{
     margin-top:25px;
-    color:#94a3b8;
+    color:#cbd5e1;
 }
 
-/* ======================
-   SCROLLBAR
-====================== */
+/* ==========================
+SCROLLBAR
+========================== */
 
 ::-webkit-scrollbar{
-    width:8px;
-}
-
-::-webkit-scrollbar-track{
-    background:#0f172a;
+    width:10px;
 }
 
 ::-webkit-scrollbar-thumb{
-    background:var(--primary);
-    border-radius:10px;
+    background:#38bdf8;
+    border-radius:20px;
 }
 
-/* ======================
-   RESPONSIVE
-====================== */
+::-webkit-scrollbar-track{
+    background:#111827;
+}
 
-@media(max-width:768px){
+/* ==========================
+RESPONSIVE
+========================== */
 
-    nav{
-        flex-direction:column;
-        gap:15px;
-    }
+@media(max-width:900px){
 
-    nav ul{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
+nav{
+    flex-direction:column;
+    gap:20px;
+}
 
-    #hero h1{
-        font-size:2.5rem;
-    }
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
 
-    .profile-pic{
-        width:180px;
-        height:180px;
-    }
+#hero h1{
+    font-size:40px;
+}
 
-    section{
-        padding:70px 6%;
-    }
+.profile-pic{
+    width:180px;
+    height:180px;
+}
+
+section{
+    padding:30px;
+}
+
+section h2{
+    font-size:30px;
+}
+
+blockquote{
+    font-size:16px;
+}
+
+}
+
+@media(max-width:600px){
+
+.logo{
+    font-size:24px;
+}
+
+#hero h1{
+    font-size:32px;
+}
+
+#hero pre{
+    font-size:17px;
+}
+
+#btn{
+    width:100%;
+}
+
+.skill{
+    width:100%;
+}
+
+footer button{
+    width:55px;
+    height:55px;
+}
+
+footer img{
+    width:28px;
+    height:28px;
+}
+
 }
