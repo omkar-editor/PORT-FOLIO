@@ -114,15 +114,15 @@ Features
 
 <p align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight"/>
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=omkar-editor&show_icons=true&theme=tokyonight"/>
 
-<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=tokyonight"/>
+<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=omkar-editor&theme=tokyonight"/>
 
 </p>
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=tokyonight"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=omkar-editor&layout=compact&theme=tokyonight"/>
 
 </p>
 
@@ -132,7 +132,7 @@ Features
 
 <p align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=YOUR_USERNAME&theme=tokyonight&no-frame=true&row=2&column=4"/>
+<img src="https://github-profile-trophy.vercel.app/?username=omkar-editor&theme=tokyonight&no-frame=true&row=2&column=4"/>
 
 </p>
 
@@ -142,7 +142,7 @@ Features
 
 <p align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=YOUR_USERNAME&theme=tokyo-night"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=omkar-editor&theme=tokyo-night"/>
 
 </p>
 
@@ -152,20 +152,16 @@ Features
 
 <p align="left">
 
-<a href="https://github.com/YOUR_USERNAME">
+<a href="https://github.com/omkar-editor">
 <img src="https://skillicons.dev/icons?i=github"/>
 </a>
 
-<a href="https://linkedin.com/in/YOUR_LINKEDIN">
+<a href="https://linkedin.com/in/omkar-sharma2007">
 <img src="https://skillicons.dev/icons?i=linkedin"/>
 </a>
 
-<a href="mailto:YOUR_EMAIL@gmail.com">
+<a href="mailto:122omkarsharma@gmail.com">
 <img src="https://skillicons.dev/icons?i=gmail"/>
-</a>
-
-<a href="https://twitter.com/YOUR_USERNAME">
-<img src="https://skillicons.dev/icons?i=twitter"/>
 </a>
 
 </p>
